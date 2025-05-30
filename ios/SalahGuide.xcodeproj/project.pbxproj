@@ -1,0 +1,815 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 54;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		042EEB9F6D8FC2160DF9C0F9 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 8791C026DB3FA919406E8B08 /* PrivacyInfo.xcprivacy */; };
+		044C7AD553D1434399AFCEC1 /* noop-file.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF1DD8226F84996A7BE7218 /* noop-file.swift */; };
+		0A8D9D5E2DA6A24D00BD7A50 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0A8D9D5D2DA6A24D00BD7A50 /* GoogleService-Info.plist */; };
+		0AC7E5742D90ACFC00281DCE /* Madinah.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0AC7E5712D90ACFC00281DCE /* Madinah.wav */; };
+		0AC7E5752D90ACFC00281DCE /* Mishari.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0AC7E5722D90ACFC00281DCE /* Mishari.wav */; };
+		0AC7E5762D90ACFC00281DCE /* Makkah.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0AC7E5732D90ACFC00281DCE /* Makkah.wav */; };
+		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
+		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
+		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		3E461D99554A48A4959DE609 /* SplashScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA286B85B6C04FC6940260E9 /* SplashScreen.storyboard */; };
+		B18059E884C0ABDD17F3DC3D /* ExpoModulesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC715A2D49A985799AEE119 /* ExpoModulesProvider.swift */; };
+		BB2F792D24A3F905000567C9 /* Expo.plist in Resources */ = {isa = PBXBuildFile; fileRef = BB2F792C24A3F905000567C9 /* Expo.plist */; };
+		CCC0278221C4AE3AFBBA98DB /* Pods_SalahGuide.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FF4389A4DAB047B43515BCF /* Pods_SalahGuide.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0A8D9D5D2DA6A24D00BD7A50 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		0AC7E5652D90A56900281DCE /* Madinah.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Madinah.wav; sourceTree = "<group>"; };
+		0AC7E5662D90A56900281DCE /* Makkah.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Makkah.wav; sourceTree = "<group>"; };
+		0AC7E5672D90A56900281DCE /* Mishari.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Mishari.wav; sourceTree = "<group>"; };
+		0AC7E56B2D90ACFC00281DCE /* Makkah.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Makkah.wav; sourceTree = "<group>"; };
+		0AC7E56C2D90ACFC00281DCE /* Mishari.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Mishari.wav; sourceTree = "<group>"; };
+		0AC7E56D2D90ACFC00281DCE /* Madinah.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Madinah.wav; sourceTree = "<group>"; };
+		0AC7E5712D90ACFC00281DCE /* Madinah.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = Madinah.wav; path = sounds/Madinah.wav; sourceTree = "<group>"; };
+		0AC7E5722D90ACFC00281DCE /* Mishari.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = Mishari.wav; path = sounds/Mishari.wav; sourceTree = "<group>"; };
+		0AC7E5732D90ACFC00281DCE /* Makkah.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = Makkah.wav; path = sounds/Makkah.wav; sourceTree = "<group>"; };
+		0BEAA67F2D866663002A902B /* SpaceMono-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SpaceMono-Regular.ttf"; sourceTree = "<group>"; };
+		0BEAA6812D866663002A902B /* do-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "do-icon.png"; sourceTree = "<group>"; };
+		0BEAA6822D866663002A902B /* dont-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dont-icon.png"; sourceTree = "<group>"; };
+		0BEAA6832D866663002A902B /* favicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = favicon.png; sourceTree = "<group>"; };
+		0BEAA6842D866663002A902B /* kaaba.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kaaba.png; sourceTree = "<group>"; };
+		0BEAA6852D866663002A902B /* partial-react-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "partial-react-logo.png"; sourceTree = "<group>"; };
+		0BEAA6862D866663002A902B /* react-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "react-logo.png"; sourceTree = "<group>"; };
+		0BEAA6872D866663002A902B /* react-logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "react-logo@2x.png"; sourceTree = "<group>"; };
+		0BEAA6882D866663002A902B /* react-logo@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "react-logo@3x.png"; sourceTree = "<group>"; };
+		0BEAA6892D866663002A902B /* splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splash.png; sourceTree = "<group>"; };
+		0BEAA68B2D866663002A902B /* isti11.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = isti11.mp3; sourceTree = "<group>"; };
+		0BEAA68C2D866663002A902B /* Madinah.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Madinah.wav; sourceTree = "<group>"; };
+		0BEAA68D2D866663002A902B /* Makkah.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Makkah.wav; sourceTree = "<group>"; };
+		0BEAA68E2D866663002A902B /* Mishari.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Mishari.wav; sourceTree = "<group>"; };
+		0BEAA6902D866663002A902B /* AssalamuSvg.tsx */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.typescript; path = AssalamuSvg.tsx; sourceTree = "<group>"; };
+		0BEAA6912D866663002A902B /* ConfigNotificationSvg.tsx */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.typescript; path = ConfigNotificationSvg.tsx; sourceTree = "<group>"; };
+		0BEAA6922D866663002A902B /* FaqConfigSvg.tsx */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.typescript; path = FaqConfigSvg.tsx; sourceTree = "<group>"; };
+		0BEAA6932D866663002A902B /* LeftArrowSvg.tsx */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.typescript; path = LeftArrowSvg.tsx; sourceTree = "<group>"; };
+		0BEAA6942D866663002A902B /* LitTlePlane.tsx */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.typescript; path = LitTlePlane.tsx; sourceTree = "<group>"; };
+		0BEAA6952D866663002A902B /* LitTlePlane copy.tsx */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.typescript; path = "LitTlePlane copy.tsx"; sourceTree = "<group>"; };
+		0BEAA6962D866663002A902B /* LocationSvg.tsx */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.typescript; path = LocationSvg.tsx; sourceTree = "<group>"; };
+		0BEAA6972D866663002A902B /* LocationSvg2.tsx */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.typescript; path = LocationSvg2.tsx; sourceTree = "<group>"; };
+		0BEAA6982D866663002A902B /* MadhabSvg.tsx */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.typescript; path = MadhabSvg.tsx; sourceTree = "<group>"; };
+		0BEAA6992D866663002A902B /* NotificationSvg.tsx */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.typescript; path = NotificationSvg.tsx; sourceTree = "<group>"; };
+		0BEAA69A2D866663002A902B /* OtherConfigSvg.tsx */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.typescript; path = OtherConfigSvg.tsx; sourceTree = "<group>"; };
+		0BEAA69B2D866663002A902B /* PlayerConfigSvg.tsx */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.typescript; path = PlayerConfigSvg.tsx; sourceTree = "<group>"; };
+		0BEAA69C2D866663002A902B /* PlayerSvg.tsx */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.typescript; path = PlayerSvg.tsx; sourceTree = "<group>"; };
+		0BEAA69D2D866663002A902B /* PlayerSvgOutline.tsx */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.typescript; path = PlayerSvgOutline.tsx; sourceTree = "<group>"; };
+		0BEAA69E2D866663002A902B /* PrivacyConfigSvg.tsx */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.typescript; path = PrivacyConfigSvg.tsx; sourceTree = "<group>"; };
+		0BEAA69F2D866663002A902B /* PrivateSvg.tsx */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.typescript; path = PrivateSvg.tsx; sourceTree = "<group>"; };
+		0BEAA6A02D866663002A902B /* QiblaIconSvg.tsx */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.typescript; path = QiblaIconSvg.tsx; sourceTree = "<group>"; };
+		0BEAA6A12D866663002A902B /* QiblaRowSvg.tsx */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.typescript; path = QiblaRowSvg.tsx; sourceTree = "<group>"; };
+		0BEAA6A22D866663002A902B /* qiblaSvg.tsx */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.typescript; path = qiblaSvg.tsx; sourceTree = "<group>"; };
+		0BEAA6A32D866663002A902B /* ReportConfigSvg.tsx */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.typescript; path = ReportConfigSvg.tsx; sourceTree = "<group>"; };
+		0BEAA6A42D866663002A902B /* RequestConfigSvg.tsx */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.typescript; path = RequestConfigSvg.tsx; sourceTree = "<group>"; };
+		0BEAA6A52D866663002A902B /* RigthArrowSvg.tsx */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.typescript; path = RigthArrowSvg.tsx; sourceTree = "<group>"; };
+		0BEAA6A62D866663002A902B /* SadiqabadSvg.tsx */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.typescript; path = SadiqabadSvg.tsx; sourceTree = "<group>"; };
+		0BEAA6A72D866663002A902B /* SettingsSvg.tsx */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.typescript; path = SettingsSvg.tsx; sourceTree = "<group>"; };
+		0BEAA6A82D866663002A902B /* SettingsSvgOutline.tsx */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.typescript; path = SettingsSvgOutline.tsx; sourceTree = "<group>"; };
+		0BEAA6A92D866663002A902B /* ShareConfigSvg.tsx */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.typescript; path = ShareConfigSvg.tsx; sourceTree = "<group>"; };
+		0BEAA6AA2D866663002A902B /* SpeakerSvg.tsx */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.typescript; path = SpeakerSvg.tsx; sourceTree = "<group>"; };
+		0BEAA6AB2D866663002A902B /* StarsDecoration.tsx */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.typescript; path = StarsDecoration.tsx; sourceTree = "<group>"; };
+		0BEAA6AC2D866663002A902B /* SupportConfigSvg.tsx */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.typescript; path = SupportConfigSvg.tsx; sourceTree = "<group>"; };
+		0BEAA6AD2D866663002A902B /* ThemesConfigSvg.tsx */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.typescript; path = ThemesConfigSvg.tsx; sourceTree = "<group>"; };
+		0BEAA6AE2D866663002A902B /* TimingBellActiveSvg.tsx */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.typescript; path = TimingBellActiveSvg.tsx; sourceTree = "<group>"; };
+		0BEAA6AF2D866663002A902B /* TimingBellUnactiveSvg.tsx */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.typescript; path = TimingBellUnactiveSvg.tsx; sourceTree = "<group>"; };
+		0BEAA6B02D866663002A902B /* timingSvg.tsx */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.typescript; path = timingSvg.tsx; sourceTree = "<group>"; };
+		0BEAA6B12D866663002A902B /* TimmingIconSvg.tsx */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.typescript; path = TimmingIconSvg.tsx; sourceTree = "<group>"; };
+		0BEAA6B22D866663002A902B /* WabeDecoration.tsx */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.typescript; path = WabeDecoration.tsx; sourceTree = "<group>"; };
+		13B07F961A680F5B00A75B9A /* SalahGuide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SalahGuide.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = SalahGuide/AppDelegate.h; sourceTree = "<group>"; };
+		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = SalahGuide/AppDelegate.mm; sourceTree = "<group>"; };
+		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = SalahGuide/Images.xcassets; sourceTree = "<group>"; };
+		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = SalahGuide/Info.plist; sourceTree = "<group>"; };
+		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = SalahGuide/main.m; sourceTree = "<group>"; };
+		1D1173975BEDA5FFA675B459 /* Pods-SalahGuide.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SalahGuide.release.xcconfig"; path = "Target Support Files/Pods-SalahGuide/Pods-SalahGuide.release.xcconfig"; sourceTree = "<group>"; };
+		2F446284FB5941D4A8980E7A /* SalahGuide-Bridging-Header.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = "SalahGuide-Bridging-Header.h"; path = "SalahGuide/SalahGuide-Bridging-Header.h"; sourceTree = "<group>"; };
+		2FF1DD8226F84996A7BE7218 /* noop-file.swift */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.swift; name = "noop-file.swift"; path = "SalahGuide/noop-file.swift"; sourceTree = "<group>"; };
+		6FF4389A4DAB047B43515BCF /* Pods_SalahGuide.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SalahGuide.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		823E6C2501130E210AC1450D /* Pods-SalahGuide.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SalahGuide.debug.xcconfig"; path = "Target Support Files/Pods-SalahGuide/Pods-SalahGuide.debug.xcconfig"; sourceTree = "<group>"; };
+		8791C026DB3FA919406E8B08 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xml; name = PrivacyInfo.xcprivacy; path = SalahGuide/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		99E250D02D8C73A700478F61 /* madinah.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = madinah.wav; sourceTree = "<group>"; };
+		99E250D12D8C73A700478F61 /* makkah.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = makkah.wav; sourceTree = "<group>"; };
+		99E250D22D8C73A700478F61 /* mishari.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = mishari.wav; sourceTree = "<group>"; };
+		AA286B85B6C04FC6940260E9 /* SplashScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = SplashScreen.storyboard; path = SalahGuide/SplashScreen.storyboard; sourceTree = "<group>"; };
+		BB2F792C24A3F905000567C9 /* Expo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Expo.plist; sourceTree = "<group>"; };
+		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		FAC715A2D49A985799AEE119 /* ExpoModulesProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpoModulesProvider.swift; path = "Pods/Target Support Files/Pods-SalahGuide/ExpoModulesProvider.swift"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		13B07F8C1A680F5B00A75B9A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CCC0278221C4AE3AFBBA98DB /* Pods_SalahGuide.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0BEAA6802D866663002A902B /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				0BEAA67F2D866663002A902B /* SpaceMono-Regular.ttf */,
+			);
+			path = fonts;
+			sourceTree = "<group>";
+		};
+		0BEAA68A2D866663002A902B /* images */ = {
+			isa = PBXGroup;
+			children = (
+				0BEAA6812D866663002A902B /* do-icon.png */,
+				0BEAA6822D866663002A902B /* dont-icon.png */,
+				0BEAA6832D866663002A902B /* favicon.png */,
+				0BEAA6842D866663002A902B /* kaaba.png */,
+				0BEAA6852D866663002A902B /* partial-react-logo.png */,
+				0BEAA6862D866663002A902B /* react-logo.png */,
+				0BEAA6872D866663002A902B /* react-logo@2x.png */,
+				0BEAA6882D866663002A902B /* react-logo@3x.png */,
+				0BEAA6892D866663002A902B /* splash.png */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
+		0BEAA68F2D866663002A902B /* sounds */ = {
+			isa = PBXGroup;
+			children = (
+				0BEAA68B2D866663002A902B /* isti11.mp3 */,
+				0BEAA68C2D866663002A902B /* Madinah.wav */,
+				0BEAA68D2D866663002A902B /* Makkah.wav */,
+				0BEAA68E2D866663002A902B /* Mishari.wav */,
+			);
+			path = sounds;
+			sourceTree = "<group>";
+		};
+		0BEAA6B32D866663002A902B /* svg */ = {
+			isa = PBXGroup;
+			children = (
+				0BEAA6902D866663002A902B /* AssalamuSvg.tsx */,
+				0BEAA6912D866663002A902B /* ConfigNotificationSvg.tsx */,
+				0BEAA6922D866663002A902B /* FaqConfigSvg.tsx */,
+				0BEAA6932D866663002A902B /* LeftArrowSvg.tsx */,
+				0BEAA6942D866663002A902B /* LitTlePlane.tsx */,
+				0BEAA6952D866663002A902B /* LitTlePlane copy.tsx */,
+				0BEAA6962D866663002A902B /* LocationSvg.tsx */,
+				0BEAA6972D866663002A902B /* LocationSvg2.tsx */,
+				0BEAA6982D866663002A902B /* MadhabSvg.tsx */,
+				0BEAA6992D866663002A902B /* NotificationSvg.tsx */,
+				0BEAA69A2D866663002A902B /* OtherConfigSvg.tsx */,
+				0BEAA69B2D866663002A902B /* PlayerConfigSvg.tsx */,
+				0BEAA69C2D866663002A902B /* PlayerSvg.tsx */,
+				0BEAA69D2D866663002A902B /* PlayerSvgOutline.tsx */,
+				0BEAA69E2D866663002A902B /* PrivacyConfigSvg.tsx */,
+				0BEAA69F2D866663002A902B /* PrivateSvg.tsx */,
+				0BEAA6A02D866663002A902B /* QiblaIconSvg.tsx */,
+				0BEAA6A12D866663002A902B /* QiblaRowSvg.tsx */,
+				0BEAA6A22D866663002A902B /* qiblaSvg.tsx */,
+				0BEAA6A32D866663002A902B /* ReportConfigSvg.tsx */,
+				0BEAA6A42D866663002A902B /* RequestConfigSvg.tsx */,
+				0BEAA6A52D866663002A902B /* RigthArrowSvg.tsx */,
+				0BEAA6A62D866663002A902B /* SadiqabadSvg.tsx */,
+				0BEAA6A72D866663002A902B /* SettingsSvg.tsx */,
+				0BEAA6A82D866663002A902B /* SettingsSvgOutline.tsx */,
+				0BEAA6A92D866663002A902B /* ShareConfigSvg.tsx */,
+				0BEAA6AA2D866663002A902B /* SpeakerSvg.tsx */,
+				0BEAA6AB2D866663002A902B /* StarsDecoration.tsx */,
+				0BEAA6AC2D866663002A902B /* SupportConfigSvg.tsx */,
+				0BEAA6AD2D866663002A902B /* ThemesConfigSvg.tsx */,
+				0BEAA6AE2D866663002A902B /* TimingBellActiveSvg.tsx */,
+				0BEAA6AF2D866663002A902B /* TimingBellUnactiveSvg.tsx */,
+				0BEAA6B02D866663002A902B /* timingSvg.tsx */,
+				0BEAA6B12D866663002A902B /* TimmingIconSvg.tsx */,
+				0BEAA6B22D866663002A902B /* WabeDecoration.tsx */,
+			);
+			path = svg;
+			sourceTree = "<group>";
+		};
+		0BEAA6B42D866663002A902B /* assets */ = {
+			isa = PBXGroup;
+			children = (
+				0BEAA6802D866663002A902B /* fonts */,
+				0BEAA68A2D866663002A902B /* images */,
+				0BEAA68F2D866663002A902B /* sounds */,
+				0BEAA6B32D866663002A902B /* svg */,
+			);
+			name = assets;
+			path = ../assets;
+			sourceTree = "<group>";
+		};
+		13B07FAE1A68108700A75B9A /* SalahGuide */ = {
+			isa = PBXGroup;
+			children = (
+				0A8D9D5D2DA6A24D00BD7A50 /* GoogleService-Info.plist */,
+				BB2F792B24A3F905000567C9 /* Supporting */,
+				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
+				13B07FB01A68108700A75B9A /* AppDelegate.mm */,
+				13B07FB51A68108700A75B9A /* Images.xcassets */,
+				13B07FB61A68108700A75B9A /* Info.plist */,
+				13B07FB71A68108700A75B9A /* main.m */,
+				AA286B85B6C04FC6940260E9 /* SplashScreen.storyboard */,
+				2FF1DD8226F84996A7BE7218 /* noop-file.swift */,
+				2F446284FB5941D4A8980E7A /* SalahGuide-Bridging-Header.h */,
+				8791C026DB3FA919406E8B08 /* PrivacyInfo.xcprivacy */,
+			);
+			name = SalahGuide;
+			sourceTree = "<group>";
+		};
+		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
+				6FF4389A4DAB047B43515BCF /* Pods_SalahGuide.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Libraries;
+			sourceTree = "<group>";
+		};
+		83CBB9F61A601CBA00E9B192 = {
+			isa = PBXGroup;
+			children = (
+				0AC7E5652D90A56900281DCE /* Madinah.wav */,
+				0AC7E56D2D90ACFC00281DCE /* Madinah.wav */,
+				0AC7E5662D90A56900281DCE /* Makkah.wav */,
+				0AC7E5732D90ACFC00281DCE /* Makkah.wav */,
+				0AC7E5672D90A56900281DCE /* Mishari.wav */,
+				0AC7E56B2D90ACFC00281DCE /* Makkah.wav */,
+				0AC7E56C2D90ACFC00281DCE /* Mishari.wav */,
+				0AC7E5712D90ACFC00281DCE /* Madinah.wav */,
+				0AC7E5722D90ACFC00281DCE /* Mishari.wav */,
+				99E250D02D8C73A700478F61 /* madinah.wav */,
+				99E250D12D8C73A700478F61 /* makkah.wav */,
+				99E250D22D8C73A700478F61 /* mishari.wav */,
+				0BEAA6B42D866663002A902B /* assets */,
+				13B07FAE1A68108700A75B9A /* SalahGuide */,
+				832341AE1AAA6A7D00B99B32 /* Libraries */,
+				83CBBA001A601CBA00E9B192 /* Products */,
+				2D16E6871FA4F8E400B85C8A /* Frameworks */,
+				D65327D7A22EEC0BE12398D9 /* Pods */,
+				D7E4C46ADA2E9064B798F356 /* ExpoModulesProviders */,
+			);
+			indentWidth = 2;
+			sourceTree = "<group>";
+			tabWidth = 2;
+			usesTabs = 0;
+		};
+		83CBBA001A601CBA00E9B192 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				13B07F961A680F5B00A75B9A /* SalahGuide.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		92DBD88DE9BF7D494EA9DA96 /* SalahGuide */ = {
+			isa = PBXGroup;
+			children = (
+				FAC715A2D49A985799AEE119 /* ExpoModulesProvider.swift */,
+			);
+			name = SalahGuide;
+			sourceTree = "<group>";
+		};
+		BB2F792B24A3F905000567C9 /* Supporting */ = {
+			isa = PBXGroup;
+			children = (
+				BB2F792C24A3F905000567C9 /* Expo.plist */,
+			);
+			name = Supporting;
+			path = SalahGuide/Supporting;
+			sourceTree = "<group>";
+		};
+		D65327D7A22EEC0BE12398D9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				823E6C2501130E210AC1450D /* Pods-SalahGuide.debug.xcconfig */,
+				1D1173975BEDA5FFA675B459 /* Pods-SalahGuide.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		D7E4C46ADA2E9064B798F356 /* ExpoModulesProviders */ = {
+			isa = PBXGroup;
+			children = (
+				92DBD88DE9BF7D494EA9DA96 /* SalahGuide */,
+			);
+			name = ExpoModulesProviders;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		13B07F861A680F5B00A75B9A /* SalahGuide */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "SalahGuide" */;
+			buildPhases = (
+				43E73F2082124B38FE6AF056 /* [CP] Check Pods Manifest.lock */,
+				8BE7597D8909FA0874B9D48C /* [Expo] Configure project */,
+				13B07F871A680F5B00A75B9A /* Sources */,
+				13B07F8C1A680F5B00A75B9A /* Frameworks */,
+				13B07F8E1A680F5B00A75B9A /* Resources */,
+				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
+				21297468CDDA4628AB64B0C3 /* Upload Debug Symbols to Sentry */,
+				308D5CB6FA7952F9197407DB /* [CP] Embed Pods Frameworks */,
+				0231F740357B918ABAE79D34 /* [CP] Copy Pods Resources */,
+				945EBB7C250BD410368194D2 /* [CP-User] [RNFB] Core Configuration */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SalahGuide;
+			productName = SalahGuide;
+			productReference = 13B07F961A680F5B00A75B9A /* SalahGuide.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		83CBB9F71A601CBA00E9B192 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1130;
+				TargetAttributes = {
+					13B07F861A680F5B00A75B9A = {
+						LastSwiftMigration = 1250;
+					};
+				};
+			};
+			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "SalahGuide" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 83CBB9F61A601CBA00E9B192;
+			productRefGroup = 83CBBA001A601CBA00E9B192 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				13B07F861A680F5B00A75B9A /* SalahGuide */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		13B07F8E1A680F5B00A75B9A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0AC7E5742D90ACFC00281DCE /* Madinah.wav in Resources */,
+				0A8D9D5E2DA6A24D00BD7A50 /* GoogleService-Info.plist in Resources */,
+				0AC7E5752D90ACFC00281DCE /* Mishari.wav in Resources */,
+				0AC7E5762D90ACFC00281DCE /* Makkah.wav in Resources */,
+				BB2F792D24A3F905000567C9 /* Expo.plist in Resources */,
+				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				3E461D99554A48A4959DE609 /* SplashScreen.storyboard in Resources */,
+				042EEB9F6D8FC2160DF9C0F9 /* PrivacyInfo.xcprivacy in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Bundle React Native code and images";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [[ -f \"$PODS_ROOT/../.xcode.env\" ]]; then\n  source \"$PODS_ROOT/../.xcode.env\"\nfi\nif [[ -f \"$PODS_ROOT/../.xcode.env.local\" ]]; then\n  source \"$PODS_ROOT/../.xcode.env.local\"\nfi\n\n# The project root by default is one level up from the ios directory\nexport PROJECT_ROOT=\"$PROJECT_DIR\"/..\n\nif [[ \"$CONFIGURATION\" = *Debug* ]]; then\n  export SKIP_BUNDLING=1\nfi\nif [[ -z \"$ENTRY_FILE\" ]]; then\n  # Set the entry JS file using the bundler's entry resolution.\n  export ENTRY_FILE=\"$(\"$NODE_BINARY\" -e \"require('expo/scripts/resolveAppEntry')\" \"$PROJECT_ROOT\" ios absolute | tail -n 1)\"\nfi\n\nif [[ -z \"$CLI_PATH\" ]]; then\n  # Use Expo CLI\n  export CLI_PATH=\"$(\"$NODE_BINARY\" --print \"require.resolve('@expo/cli', { paths: [require.resolve('expo/package.json')] })\")\"\nfi\nif [[ -z \"$BUNDLE_COMMAND\" ]]; then\n  # Default Expo CLI command for bundling\n  export BUNDLE_COMMAND=\"export:embed\"\nfi\n\n# Source .xcode.env.updates if it exists to allow\n# SKIP_BUNDLING to be unset if needed\nif [[ -f \"$PODS_ROOT/../.xcode.env.updates\" ]]; then\n  source \"$PODS_ROOT/../.xcode.env.updates\"\nfi\n# Source local changes to allow overrides\n# if needed\nif [[ -f \"$PODS_ROOT/../.xcode.env.local\" ]]; then\n  source \"$PODS_ROOT/../.xcode.env.local\"\nfi\n\n/bin/sh `\"$NODE_BINARY\" --print \"require('path').dirname(require.resolve('@sentry/react-native/package.json')) + '/scripts/sentry-xcode.sh'\"` `\"$NODE_BINARY\" --print \"require('path').dirname(require.resolve('react-native/package.json')) + '/scripts/react-native-xcode.sh'\"`\n\n";
+		};
+		0231F740357B918ABAE79D34 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SalahGuide/Pods-SalahGuide-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/EXApplication/ExpoApplication_privacy.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/EXConstants/EXConstants.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/EXConstants/ExpoConstants_privacy.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/EXNotifications/ExpoNotifications_privacy.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/EXTaskManager/ExpoTaskManager_privacy.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/EXUpdates/EXUpdates.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/ExpoFileSystem/ExpoFileSystem_privacy.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/ExpoSystemUI/ExpoSystemUI_privacy.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseCoreInternal/FirebaseCoreInternal_Privacy.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseInstallations/FirebaseInstallations_Privacy.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/GoogleDataTransport/GoogleDataTransport_Privacy.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/GoogleUtilities/GoogleUtilities_Privacy.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/PromisesObjC/FBLPromises_Privacy.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/RNCAsyncStorage/RNCAsyncStorage_resources.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/RNDeviceInfo/RNDeviceInfoPrivacyInfo.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/ReachabilitySwift/ReachabilitySwift.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/React-Core/RCTI18nStrings.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/SDWebImage/SDWebImage.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/Sentry/Sentry.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/lottie-ios/LottiePrivacyInfo.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/lottie-react-native/Lottie_React_Native_Privacy.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ExpoApplication_privacy.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/EXConstants.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ExpoConstants_privacy.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ExpoNotifications_privacy.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ExpoTaskManager_privacy.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/EXUpdates.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ExpoFileSystem_privacy.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ExpoSystemUI_privacy.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseCoreInternal_Privacy.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseInstallations_Privacy.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleDataTransport_Privacy.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleUtilities_Privacy.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FBLPromises_Privacy.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/RNCAsyncStorage_resources.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/RNDeviceInfoPrivacyInfo.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ReachabilitySwift.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/RCTI18nStrings.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SDWebImage.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Sentry.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/LottiePrivacyInfo.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Lottie_React_Native_Privacy.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SalahGuide/Pods-SalahGuide-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		21297468CDDA4628AB64B0C3 /* Upload Debug Symbols to Sentry */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Upload Debug Symbols to Sentry";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/bin/sh ../node_modules/@sentry/react-native/scripts/sentry-xcode-debug-files.sh";
+		};
+		308D5CB6FA7952F9197407DB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SalahGuide/Pods-SalahGuide-frameworks.sh",
+				"${PODS_XCFRAMEWORKS_BUILD_DIR}/hermes-engine/Pre-built/hermes.framework/hermes",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/hermes.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SalahGuide/Pods-SalahGuide-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		43E73F2082124B38FE6AF056 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SalahGuide-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8BE7597D8909FA0874B9D48C /* [Expo] Configure project */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "[Expo] Configure project";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# This script configures Expo modules and generates the modules provider file.\nbash -l -c \"./Pods/Target\\ Support\\ Files/Pods-SalahGuide/expo-configure-project.sh\"\n";
+		};
+		945EBB7C250BD410368194D2 /* [CP-User] [RNFB] Core Configuration */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
+			);
+			name = "[CP-User] [RNFB] Core Configuration";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/usr/bin/env bash\n#\n# Copyright (c) 2016-present Invertase Limited & Contributors\n#\n# Licensed under the Apache License, Version 2.0 (the \"License\");\n# you may not use this library except in compliance with the License.\n# You may obtain a copy of the License at\n#\n#   http://www.apache.org/licenses/LICENSE-2.0\n#\n# Unless required by applicable law or agreed to in writing, software\n# distributed under the License is distributed on an \"AS IS\" BASIS,\n# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n# See the License for the specific language governing permissions and\n# limitations under the License.\n#\nset -e\n\n_MAX_LOOKUPS=2;\n_SEARCH_RESULT=''\n_RN_ROOT_EXISTS=''\n_CURRENT_LOOKUPS=1\n_JSON_ROOT=\"'react-native'\"\n_JSON_FILE_NAME='firebase.json'\n_JSON_OUTPUT_BASE64='e30=' # { }\n_CURRENT_SEARCH_DIR=${PROJECT_DIR}\n_PLIST_BUDDY=/usr/libexec/PlistBuddy\n_TARGET_PLIST=\"${BUILT_PRODUCTS_DIR}/${INFOPLIST_PATH}\"\n_DSYM_PLIST=\"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Info.plist\"\n\n# plist arrays\n_PLIST_ENTRY_KEYS=()\n_PLIST_ENTRY_TYPES=()\n_PLIST_ENTRY_VALUES=()\n\nfunction setPlistValue {\n  echo \"info:      setting plist entry '$1' of type '$2' in file '$4'\"\n  ${_PLIST_BUDDY} -c \"Add :$1 $2 '$3'\" $4 || echo \"info:      '$1' already exists\"\n}\n\nfunction getFirebaseJsonKeyValue () {\n  if [[ ${_RN_ROOT_EXISTS} ]]; then\n    ruby -Ku -e \"require 'rubygems';require 'json'; output=JSON.parse('$1'); puts output[$_JSON_ROOT]['$2']\"\n  else\n    echo \"\"\n  fi;\n}\n\nfunction jsonBoolToYesNo () {\n  if [[ $1 == \"false\" ]]; then\n    echo \"NO\"\n  elif [[ $1 == \"true\" ]]; then\n    echo \"YES\"\n  else echo \"NO\"\n  fi\n}\n\necho \"info: -> RNFB build script started\"\necho \"info: 1) Locating ${_JSON_FILE_NAME} file:\"\n\nif [[ -z ${_CURRENT_SEARCH_DIR} ]]; then\n  _CURRENT_SEARCH_DIR=$(pwd)\nfi;\n\nwhile true; do\n  _CURRENT_SEARCH_DIR=$(dirname \"$_CURRENT_SEARCH_DIR\")\n  if [[ \"$_CURRENT_SEARCH_DIR\" == \"/\" ]] || [[ ${_CURRENT_LOOKUPS} -gt ${_MAX_LOOKUPS} ]]; then break; fi;\n  echo \"info:      ($_CURRENT_LOOKUPS of $_MAX_LOOKUPS) Searching in '$_CURRENT_SEARCH_DIR' for a ${_JSON_FILE_NAME} file.\"\n  _SEARCH_RESULT=$(find \"$_CURRENT_SEARCH_DIR\" -maxdepth 2 -name ${_JSON_FILE_NAME} -print | /usr/bin/head -n 1)\n  if [[ ${_SEARCH_RESULT} ]]; then\n    echo \"info:      ${_JSON_FILE_NAME} found at $_SEARCH_RESULT\"\n    break;\n  fi;\n  _CURRENT_LOOKUPS=$((_CURRENT_LOOKUPS+1))\ndone\n\nif [[ ${_SEARCH_RESULT} ]]; then\n  _JSON_OUTPUT_RAW=$(cat \"${_SEARCH_RESULT}\")\n  _RN_ROOT_EXISTS=$(ruby -Ku -e \"require 'rubygems';require 'json'; output=JSON.parse('$_JSON_OUTPUT_RAW'); puts output[$_JSON_ROOT]\" || echo '')\n\n  if [[ ${_RN_ROOT_EXISTS} ]]; then\n    if ! python3 --version >/dev/null 2>&1; then echo \"python3 not found, firebase.json file processing error.\" && exit 1; fi\n    _JSON_OUTPUT_BASE64=$(python3 -c 'import json,sys,base64;print(base64.b64encode(bytes(json.dumps(json.loads(open('\"'${_SEARCH_RESULT}'\"', '\"'rb'\"').read())['${_JSON_ROOT}']), '\"'utf-8'\"')).decode())' || echo \"e30=\")\n  fi\n\n  _PLIST_ENTRY_KEYS+=(\"firebase_json_raw\")\n  _PLIST_ENTRY_TYPES+=(\"string\")\n  _PLIST_ENTRY_VALUES+=(\"$_JSON_OUTPUT_BASE64\")\n\n  # config.app_data_collection_default_enabled\n  _APP_DATA_COLLECTION_ENABLED=$(getFirebaseJsonKeyValue \"$_JSON_OUTPUT_RAW\" \"app_data_collection_default_enabled\")\n  if [[ $_APP_DATA_COLLECTION_ENABLED ]]; then\n    _PLIST_ENTRY_KEYS+=(\"FirebaseDataCollectionDefaultEnabled\")\n    _PLIST_ENTRY_TYPES+=(\"bool\")\n    _PLIST_ENTRY_VALUES+=(\"$(jsonBoolToYesNo \"$_APP_DATA_COLLECTION_ENABLED\")\")\n  fi\n\n  # config.analytics_auto_collection_enabled\n  _ANALYTICS_AUTO_COLLECTION=$(getFirebaseJsonKeyValue \"$_JSON_OUTPUT_RAW\" \"analytics_auto_collection_enabled\")\n  if [[ $_ANALYTICS_AUTO_COLLECTION ]]; then\n    _PLIST_ENTRY_KEYS+=(\"FIREBASE_ANALYTICS_COLLECTION_ENABLED\")\n    _PLIST_ENTRY_TYPES+=(\"bool\")\n    _PLIST_ENTRY_VALUES+=(\"$(jsonBoolToYesNo \"$_ANALYTICS_AUTO_COLLECTION\")\")\n  fi\n\n  # config.analytics_collection_deactivated\n  _ANALYTICS_DEACTIVATED=$(getFirebaseJsonKeyValue \"$_JSON_OUTPUT_RAW\" \"analytics_collection_deactivated\")\n  if [[ $_ANALYTICS_DEACTIVATED ]]; then\n    _PLIST_ENTRY_KEYS+=(\"FIREBASE_ANALYTICS_COLLECTION_DEACTIVATED\")\n    _PLIST_ENTRY_TYPES+=(\"bool\")\n    _PLIST_ENTRY_VALUES+=(\"$(jsonBoolToYesNo \"$_ANALYTICS_DEACTIVATED\")\")\n  fi\n\n  # config.analytics_idfv_collection_enabled\n  _ANALYTICS_IDFV_COLLECTION=$(getFirebaseJsonKeyValue \"$_JSON_OUTPUT_RAW\" \"analytics_idfv_collection_enabled\")\n  if [[ $_ANALYTICS_IDFV_COLLECTION ]]; then\n    _PLIST_ENTRY_KEYS+=(\"GOOGLE_ANALYTICS_IDFV_COLLECTION_ENABLED\")\n    _PLIST_ENTRY_TYPES+=(\"bool\")\n    _PLIST_ENTRY_VALUES+=(\"$(jsonBoolToYesNo \"$_ANALYTICS_IDFV_COLLECTION\")\")\n  fi\n\n  # config.analytics_default_allow_ad_personalization_signals\n  _ANALYTICS_PERSONALIZATION=$(getFirebaseJsonKeyValue \"$_JSON_OUTPUT_RAW\" \"analytics_default_allow_ad_personalization_signals\")\n  if [[ $_ANALYTICS_PERSONALIZATION ]]; then\n    _PLIST_ENTRY_KEYS+=(\"GOOGLE_ANALYTICS_DEFAULT_ALLOW_AD_PERSONALIZATION_SIGNALS\")\n    _PLIST_ENTRY_TYPES+=(\"bool\")\n    _PLIST_ENTRY_VALUES+=(\"$(jsonBoolToYesNo \"$_ANALYTICS_PERSONALIZATION\")\")\n  fi\n\n  # config.analytics_registration_with_ad_network_enabled\n  _ANALYTICS_REGISTRATION_WITH_AD_NETWORK=$(getFirebaseJsonKeyValue \"$_JSON_OUTPUT_RAW\" \"google_analytics_registration_with_ad_network_enabled\")\n  if [[ $_ANALYTICS_REGISTRATION_WITH_AD_NETWORK ]]; then\n    _PLIST_ENTRY_KEYS+=(\"GOOGLE_ANALYTICS_REGISTRATION_WITH_AD_NETWORK_ENABLED\")\n    _PLIST_ENTRY_TYPES+=(\"bool\")\n    _PLIST_ENTRY_VALUES+=(\"$(jsonBoolToYesNo \"$_ANALYTICS_REGISTRATION_WITH_AD_NETWORK\")\")\n  fi\n\n  # config.google_analytics_automatic_screen_reporting_enabled\n  _ANALYTICS_AUTO_SCREEN_REPORTING=$(getFirebaseJsonKeyValue \"$_JSON_OUTPUT_RAW\" \"google_analytics_automatic_screen_reporting_enabled\")\n  if [[ $_ANALYTICS_AUTO_SCREEN_REPORTING ]]; then\n    _PLIST_ENTRY_KEYS+=(\"FirebaseAutomaticScreenReportingEnabled\")\n    _PLIST_ENTRY_TYPES+=(\"bool\")\n    _PLIST_ENTRY_VALUES+=(\"$(jsonBoolToYesNo \"$_ANALYTICS_AUTO_SCREEN_REPORTING\")\")\n  fi\n\n  # config.perf_auto_collection_enabled\n  _PERF_AUTO_COLLECTION=$(getFirebaseJsonKeyValue \"$_JSON_OUTPUT_RAW\" \"perf_auto_collection_enabled\")\n  if [[ $_PERF_AUTO_COLLECTION ]]; then\n    _PLIST_ENTRY_KEYS+=(\"firebase_performance_collection_enabled\")\n    _PLIST_ENTRY_TYPES+=(\"bool\")\n    _PLIST_ENTRY_VALUES+=(\"$(jsonBoolToYesNo \"$_PERF_AUTO_COLLECTION\")\")\n  fi\n\n  # config.perf_collection_deactivated\n  _PERF_DEACTIVATED=$(getFirebaseJsonKeyValue \"$_JSON_OUTPUT_RAW\" \"perf_collection_deactivated\")\n  if [[ $_PERF_DEACTIVATED ]]; then\n    _PLIST_ENTRY_KEYS+=(\"firebase_performance_collection_deactivated\")\n    _PLIST_ENTRY_TYPES+=(\"bool\")\n    _PLIST_ENTRY_VALUES+=(\"$(jsonBoolToYesNo \"$_PERF_DEACTIVATED\")\")\n  fi\n\n  # config.messaging_auto_init_enabled\n  _MESSAGING_AUTO_INIT=$(getFirebaseJsonKeyValue \"$_JSON_OUTPUT_RAW\" \"messaging_auto_init_enabled\")\n  if [[ $_MESSAGING_AUTO_INIT ]]; then\n    _PLIST_ENTRY_KEYS+=(\"FirebaseMessagingAutoInitEnabled\")\n    _PLIST_ENTRY_TYPES+=(\"bool\")\n    _PLIST_ENTRY_VALUES+=(\"$(jsonBoolToYesNo \"$_MESSAGING_AUTO_INIT\")\")\n  fi\n\n  # config.in_app_messaging_auto_colllection_enabled\n  _FIAM_AUTO_INIT=$(getFirebaseJsonKeyValue \"$_JSON_OUTPUT_RAW\" \"in_app_messaging_auto_collection_enabled\")\n  if [[ $_FIAM_AUTO_INIT ]]; then\n    _PLIST_ENTRY_KEYS+=(\"FirebaseInAppMessagingAutomaticDataCollectionEnabled\")\n    _PLIST_ENTRY_TYPES+=(\"bool\")\n    _PLIST_ENTRY_VALUES+=(\"$(jsonBoolToYesNo \"$_FIAM_AUTO_INIT\")\")\n  fi\n\n  # config.app_check_token_auto_refresh\n  _APP_CHECK_TOKEN_AUTO_REFRESH=$(getFirebaseJsonKeyValue \"$_JSON_OUTPUT_RAW\" \"app_check_token_auto_refresh\")\n  if [[ $_APP_CHECK_TOKEN_AUTO_REFRESH ]]; then\n    _PLIST_ENTRY_KEYS+=(\"FirebaseAppCheckTokenAutoRefreshEnabled\")\n    _PLIST_ENTRY_TYPES+=(\"bool\")\n    _PLIST_ENTRY_VALUES+=(\"$(jsonBoolToYesNo \"$_APP_CHECK_TOKEN_AUTO_REFRESH\")\")\n  fi\n\n  # config.crashlytics_disable_auto_disabler - undocumented for now - mainly for debugging, document if becomes useful\n  _CRASHLYTICS_AUTO_DISABLE_ENABLED=$(getFirebaseJsonKeyValue \"$_JSON_OUTPUT_RAW\" \"crashlytics_disable_auto_disabler\")\n  if [[ $_CRASHLYTICS_AUTO_DISABLE_ENABLED == \"true\" ]]; then\n    echo \"Disabled Crashlytics auto disabler.\" # do nothing\n  else\n    _PLIST_ENTRY_KEYS+=(\"FirebaseCrashlyticsCollectionEnabled\")\n    _PLIST_ENTRY_TYPES+=(\"bool\")\n    _PLIST_ENTRY_VALUES+=(\"NO\")\n  fi\nelse\n  _PLIST_ENTRY_KEYS+=(\"firebase_json_raw\")\n  _PLIST_ENTRY_TYPES+=(\"string\")\n  _PLIST_ENTRY_VALUES+=(\"$_JSON_OUTPUT_BASE64\")\n  echo \"warning:   A firebase.json file was not found, whilst this file is optional it is recommended to include it to configure firebase services in React Native Firebase.\"\nfi;\n\necho \"info: 2) Injecting Info.plist entries: \"\n\n# Log out the keys we're adding\nfor i in \"${!_PLIST_ENTRY_KEYS[@]}\"; do\n  echo \"    ->  $i) ${_PLIST_ENTRY_KEYS[$i]}\" \"${_PLIST_ENTRY_TYPES[$i]}\" \"${_PLIST_ENTRY_VALUES[$i]}\"\ndone\n\nfor plist in \"${_TARGET_PLIST}\" \"${_DSYM_PLIST}\" ; do\n  if [[ -f \"${plist}\" ]]; then\n\n    # paths with spaces break the call to setPlistValue. temporarily modify\n    # the shell internal field separator variable (IFS), which normally\n    # includes spaces, to consist only of line breaks\n    oldifs=$IFS\n    IFS=\"\n\"\n\n    for i in \"${!_PLIST_ENTRY_KEYS[@]}\"; do\n      setPlistValue \"${_PLIST_ENTRY_KEYS[$i]}\" \"${_PLIST_ENTRY_TYPES[$i]}\" \"${_PLIST_ENTRY_VALUES[$i]}\" \"${plist}\"\n    done\n\n    # restore the original internal field separator value\n    IFS=$oldifs\n  else\n    echo \"warning:   A Info.plist build output file was not found (${plist})\"\n  fi\ndone\n\necho \"info: <- RNFB build script finished\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		13B07F871A680F5B00A75B9A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */,
+				13B07FC11A68108700A75B9A /* main.m in Sources */,
+				B18059E884C0ABDD17F3DC3D /* ExpoModulesProvider.swift in Sources */,
+				044C7AD553D1434399AFCEC1 /* noop-file.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		13B07F941A680F5B00A75B9A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 823E6C2501130E210AC1450D /* Pods-SalahGuide.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = SalahGuide/SalahGuide.entitlements;
+				CURRENT_PROJECT_VERSION = 49;
+				DEVELOPMENT_TEAM = D5HQW35AHV;
+				ENABLE_BITCODE = NO;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"FB_SONARKIT_ENABLED=1",
+				);
+				INFOPLIST_FILE = SalahGuide/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Salah Guide";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.reference";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.3.2;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-lc++",
+				);
+				OTHER_SWIFT_FLAGS = "$(inherited) -D EXPO_CONFIGURATION_DEBUG";
+				PRODUCT_BUNDLE_IDENTIFIER = com.aburuqayyah.salah;
+				PRODUCT_NAME = SalahGuide;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "SalahGuide/SalahGuide-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Debug;
+		};
+		13B07F951A680F5B00A75B9A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1D1173975BEDA5FFA675B459 /* Pods-SalahGuide.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = SalahGuide/SalahGuide.entitlements;
+				CURRENT_PROJECT_VERSION = 49;
+				DEVELOPMENT_TEAM = D5HQW35AHV;
+				INFOPLIST_FILE = SalahGuide/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Salah Guide";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.reference";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.3.2;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-lc++",
+				);
+				OTHER_SWIFT_FLAGS = "$(inherited) -D EXPO_CONFIGURATION_RELEASE";
+				PRODUCT_BUNDLE_IDENTIFIER = com.aburuqayyah.salah;
+				PRODUCT_NAME = SalahGuide;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "SalahGuide/SalahGuide-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Release;
+		};
+		83CBBA201A601CBA00E9B192 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CC = "";
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++20";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CXX = "";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"${PODS_CONFIGURATION_BUILD_DIR}/ReactCommon/ReactCommon.framework/Headers",
+					"${PODS_CONFIGURATION_BUILD_DIR}/ReactCommon/ReactCommon.framework/Headers/react/nativemodule/core",
+					"${PODS_CONFIGURATION_BUILD_DIR}/ReactCommon-Samples/ReactCommon_Samples.framework/Headers",
+					"${PODS_CONFIGURATION_BUILD_DIR}/ReactCommon-Samples/ReactCommon_Samples.framework/Headers/platform/ios",
+					"${PODS_CONFIGURATION_BUILD_DIR}/React-Fabric/React_Fabric.framework/Headers/react/renderer/components/view/platform/cxx",
+					"${PODS_CONFIGURATION_BUILD_DIR}/React-NativeModulesApple/React_NativeModulesApple.framework/Headers",
+					"${PODS_CONFIGURATION_BUILD_DIR}/React-graphics/React_graphics.framework/Headers",
+					"${PODS_CONFIGURATION_BUILD_DIR}/React-graphics/React_graphics.framework/Headers/react/renderer/graphics/platform/ios",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD = "";
+				LDPLUSPLUS = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					/usr/lib/swift,
+					"$(inherited)",
+				);
+				LIBRARY_SEARCH_PATHS = "$(SDKROOT)/usr/lib/swift\"$(inherited)\"";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "$(inherited)  ";
+				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
+				SDKROOT = iphoneos;
+				USE_HERMES = true;
+			};
+			name = Debug;
+		};
+		83CBBA211A601CBA00E9B192 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CC = "";
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++20";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				CXX = "";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"${PODS_CONFIGURATION_BUILD_DIR}/ReactCommon/ReactCommon.framework/Headers",
+					"${PODS_CONFIGURATION_BUILD_DIR}/ReactCommon/ReactCommon.framework/Headers/react/nativemodule/core",
+					"${PODS_CONFIGURATION_BUILD_DIR}/ReactCommon-Samples/ReactCommon_Samples.framework/Headers",
+					"${PODS_CONFIGURATION_BUILD_DIR}/ReactCommon-Samples/ReactCommon_Samples.framework/Headers/platform/ios",
+					"${PODS_CONFIGURATION_BUILD_DIR}/React-Fabric/React_Fabric.framework/Headers/react/renderer/components/view/platform/cxx",
+					"${PODS_CONFIGURATION_BUILD_DIR}/React-NativeModulesApple/React_NativeModulesApple.framework/Headers",
+					"${PODS_CONFIGURATION_BUILD_DIR}/React-graphics/React_graphics.framework/Headers",
+					"${PODS_CONFIGURATION_BUILD_DIR}/React-graphics/React_graphics.framework/Headers/react/renderer/graphics/platform/ios",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD = "";
+				LDPLUSPLUS = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					/usr/lib/swift,
+					"$(inherited)",
+				);
+				LIBRARY_SEARCH_PATHS = "$(SDKROOT)/usr/lib/swift\"$(inherited)\"";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "$(inherited)  ";
+				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
+				SDKROOT = iphoneos;
+				USE_HERMES = true;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "SalahGuide" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				13B07F941A680F5B00A75B9A /* Debug */,
+				13B07F951A680F5B00A75B9A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "SalahGuide" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83CBBA201A601CBA00E9B192 /* Debug */,
+				83CBBA211A601CBA00E9B192 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 83CBB9F71A601CBA00E9B192 /* Project object */;
+}

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "974359293027",
+    "project_id": "salah-353f3",
+    "storage_bucket": "salah-353f3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:974359293027:android:d8bf9d5807de29a296dc56",
+        "android_client_info": {
+          "package_name": "com.aburuqayyah.salah"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDZ_iuxJZGdpBE3p8vxajVH0MhdI7EDIMM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
