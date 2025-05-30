@@ -72,26 +72,22 @@ export const checkForUpdates = async (ignoreDevMode = false, forceUpdate = false
   const testLatestVersion = '1.3.2';
   const testCurrentVersion = getAppVersionName();
   
-  // For testing in development mode, we can simulate an update by comparing with a test version
+  // In development mode, only show update dialog if explicitly testing
   if (devMode && ignoreDevMode) {
-    console.log(`Development mode testing - comparing current version ${testCurrentVersion} with test version ${testLatestVersion}`);
-    // Show update dialog if the test version is higher than the current version
-    if (compareVersions(testLatestVersion, testCurrentVersion)) {
-      console.log('Update available in development mode test');
-      // Get the appropriate store URL based on platform
+    console.log('Development mode - skipping automatic update check unless forced');
+    // Only show update dialog in development if forceUpdate is true (for testing purposes)
+    if (forceUpdate) {
+      console.log('Force update requested in development mode');
       let storeUrl = '';
       if (Platform.OS === 'ios') {
         storeUrl = 'https://apps.apple.com/us/app/salah-guide-app/id6737063241';
       } else {
         storeUrl = 'https://play.google.com/store/apps/details?id=com.aburuqayyah.salah';
       }
-      // Show the update dialog
       showUpdateDialog(storeUrl, forceUpdate);
       return true;
-    } else {
-      console.log('No update available in development mode test');
-      return false;
     }
+    return false;
   }
 
   try {
@@ -248,36 +244,8 @@ export const checkForUpdates = async (ignoreDevMode = false, forceUpdate = false
       // Validate the retrieved version
       if (!latestVersion) {
         console.log(`Failed to retrieve a valid version from ${Platform.OS} store`);
-        
-        // Use a hardcoded fallback version for testing that is higher than current
-        // This ensures update dialog will appear even if store version can't be retrieved
-        const currentVersion = getAppVersionName();
-        
-        // Check if this is the first launch
-        const isFirstLaunch = !await AsyncStorage.getItem('first_app_launch');
-        
-        // Determine the fallback version based on environment and launch status
-        let fallbackVersion;
-        if (isDevelopmentMode()) {
-          // In development mode, always use a high version for testing
-          fallbackVersion = '1.3.1';
-        } else if (isFirstLaunch) {
-          // On first launch in production, use a higher version to ensure dialog appears
-          fallbackVersion = incrementVersion(currentVersion);
-          console.log(`First launch detected, using higher fallback version: ${fallbackVersion}`);
-        } else {
-          // On subsequent launches in production, use current version to prevent false prompts
-          fallbackVersion = currentVersion;
-        }
-        
-        // Only use fallback if it's higher than current version
-        if (compareVersions(fallbackVersion, currentVersion)) {
-          console.log(`Using fallback version ${fallbackVersion}`);
-          latestVersion = fallbackVersion;
-        } else {
-          // Otherwise use current version to avoid crashes
-          latestVersion = currentVersion;
-        }
+        console.log('Cannot check for updates without a valid store version');
+        return false;
       }
       
       console.log(`Retrieved ${Platform.OS} version from store:`, latestVersion);
@@ -331,27 +299,7 @@ export const checkForUpdates = async (ignoreDevMode = false, forceUpdate = false
     try {
       const now = Date.now();
       
-      // Store a flag to track if this is the first launch after install
-      let isFirstLaunch = null;
-      try {
-        isFirstLaunch = await AsyncStorage.getItem('first_app_launch');
-      } catch (error) {
-        console.log('Error checking first launch:', error);
-        // Continue even if this fails
-      }
-      
-      // If this is the first launch, set the flag and continue with update check
-      if (!isFirstLaunch) {
-        console.log('First app launch detected, setting flag');
-        try {
-          await AsyncStorage.setItem('first_app_launch', 'completed');
-          console.log('First launch flag set successfully');
-        } catch (error) {
-          console.log('Error setting first launch flag:', error);
-          // Continue even if this fails
-        }
-        console.log('Continuing with update check on first launch');
-      }
+      // Track app start time to prevent duplicate checks in the same session
       
       // Only apply a cooldown to prevent multiple checks in the same session
       let appStartTime = null;
@@ -444,94 +392,29 @@ export const checkForUpdates = async (ignoreDevMode = false, forceUpdate = false
     // Compare versions to check if an update is needed
     console.log('Version comparison:', { currentVersion, latestVersion });
     
-    // Parse versions for comparison
-    const currentParts = currentVersion.split('.').map(Number);
-    const latestParts = latestVersion.split('.').map(Number);
+    // Use the manual comparison function to check if update is needed
+    const updateNeeded = compareVersions(latestVersion, currentVersion);
     
-    // Initialize update needed flag
-    let needsUpdateByParts = false;
+    console.log('Version comparison result:', {
+      currentVersion,
+      latestVersion,
+      updateNeeded
+    });
     
-    // Compare versions to check if an update is needed
-    for (let i = 0; i < Math.max(currentParts.length, latestParts.length); i++) {
-      const current = currentParts[i] || 0;
-      const latest = latestParts[i] || 0;
-      if (latest > current) {
-        console.log(`Update needed: ${latestVersion} is newer than ${currentVersion}`);
-        needsUpdateByParts = true;
-        break;
-      } else if (current > latest) {
-        console.log(`No update needed: ${currentVersion} is newer than ${latestVersion}`);
-        needsUpdateByParts = false;
-        break;
-      }
-    }
-    
-    // If versions are identical, log it
-    if (!needsUpdateByParts) {
-      console.log('App is up to date - versions are identical');
-    }
-    
-    // Manual version comparison as a backup in case the direct comparison fails
-    // This helps especially on Android where sometimes the version check can be unreliable
-    const manualNeedsUpdate = compareVersions(latestVersion, currentVersion);
-    console.log('Manual version comparison result:', manualNeedsUpdate);
-    
-    try {
-      // Compare versions and show update dialog if needed
-      // Get the store URL based on platform - use direct URLs for reliability
+    if (updateNeeded) {
+      // Get the store URL based on platform
       let storeUrl = '';
-      
       if (Platform.OS === 'ios') {
         storeUrl = 'https://apps.apple.com/us/app/salah-guide-app/id6737063241';
       } else {
         storeUrl = 'https://play.google.com/store/apps/details?id=com.aburuqayyah.salah';
       }
       
-      console.log('Using store URL for version check:', storeUrl);
-      
-      // Call needUpdate with the store URL
-      const needsUpdate = await VersionCheck.needUpdate({
-        currentVersion,
-        latestVersion,
-        storeUrl
-      });
-      
-      // Ensure the store URL is set in the response
-      if (needsUpdate && !needsUpdate.storeUrl) {
-        console.log('Store URL not set in needUpdate response, adding it manually');
-        needsUpdate.storeUrl = storeUrl;
-      }
-      
-      console.log('Update check result from library:', needsUpdate);
-      
-      // Log all update check results for debugging
-      console.log('Update check results:', {
-        directComparison: needsUpdateByParts,
-        manualComparison: manualNeedsUpdate,
-        libraryCheck: needsUpdate && needsUpdate.isNeeded
-      });
-      
-      // Standard version comparison - show update dialog only when there's a newer version
-      // This is the standard behavior for version checking
-      
-      // Show update dialog if ANY method indicates an update is needed
-      // This provides triple redundancy to ensure updates are detected
-      const updateNeeded = needsUpdateByParts || manualNeedsUpdate || (needsUpdate && needsUpdate.isNeeded);
-      
-      console.log('Final update decision:', updateNeeded ? 'Update needed' : 'No update needed');
-      
-      if (updateNeeded) {
-        console.log('Using store URL:', storeUrl);
-        
-        // Show update dialog
-        showUpdateDialog(storeUrl, forceUpdate);
-        return true;
-      } else {
-        console.log('App is up to date');
-        return false;
-      }
-    } catch (error) {
-      console.error('Error in version comparison:', error);
+      console.log('Update needed - showing dialog');
+      showUpdateDialog(storeUrl, forceUpdate);
+      return true;
+    } else {
+      console.log('App is up to date');
       return false;
     }
   } catch (error) {

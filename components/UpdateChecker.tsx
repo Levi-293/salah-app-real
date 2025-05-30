@@ -25,9 +25,8 @@ export const UpdateChecker: React.FC<UpdateCheckerProps> = ({
 }) => {
   useEffect(() => {
     if (checkOnMount) {
-      // Pass true to ignoreDevMode parameter to check for updates even in development mode
-      // This will allow testing the update dialog in development
-      checkForUpdates(true, forceUpdate);
+      // Only ignore dev mode if this is a force update (for testing)
+      checkForUpdates(forceUpdate, forceUpdate);
     }
   }, [checkOnMount, forceUpdate]);
 
@@ -40,8 +39,8 @@ export const UpdateChecker: React.FC<UpdateCheckerProps> = ({
  * Update dialog will always be dismissible
  */
 export const triggerUpdateCheck = async (force = false) => {
-  // Always ignore dev mode (true as first parameter)
-  return await checkForUpdates(true, force);
+  // Only ignore dev mode for forced updates (testing)
+  return await checkForUpdates(force, force);
 };
 
 export default UpdateChecker;
